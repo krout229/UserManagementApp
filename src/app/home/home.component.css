@@ -1,0 +1,11 @@
+col-md-9{
+    margin-top: 10rem;
+}
+button{
+    height: 2rem;
+    width: 6rem;
+    border-radius: 4px;
+}
+button:hover{
+    background-color: gray;
+}
