@@ -1,0 +1,26 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "firstname": "Ladly",
+      "lastname": "Rout",
+      "email": "ladly.rout123@gmail.com"
+    },
+    {
+      "firstname": "Simran",
+      "lastname": "Rout",
+      "email": "simran.rout1223@gmail.com",
+      "id": 3
+    },
+    {
+      "firstname": "Saumya",
+      "lastname": "Das",
+      "email": "das.saumya1234@gmail.com",
+      "id": 4
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

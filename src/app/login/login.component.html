@@ -26,7 +26,7 @@
           </div>
           <div class="text-center text-lg-start mt-4 pt-2">
             <button type="button" class="btn btn-success"
-            type="submit" [disabled]="!LoginForm.valid" style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+            type="submit" [disabled]="!LoginForm.valid" style="padding-left: 2.5rem; padding-right: 2.5rem;" routerLink="/dashboard">Login</button>
             <button  type="button" class="btn  btn-danger"
             type="submit" (click)="Clear()" style="padding-left: 2.5rem; padding-right: 2.5rem;">Cancel</button>
             <button type="button" class="btn  btn-warning" routerLink="/home"
@@ -45,5 +45,5 @@
         </div>
       </div>
     </div>
-    
+    <a style="color:brown">This site is &#169; copyright to LTI. All rights are reserved here.</a>
   </section>

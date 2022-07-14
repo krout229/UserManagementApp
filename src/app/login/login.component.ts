@@ -9,7 +9,7 @@ import { FormBuilder, Validators,FormGroup,FormControl,AbstractControl } from '@
 })
 export class LoginComponent implements OnInit {
   public LoginForm = this.fb.group({​​​​​
-    emailid: ['',[Validators.required,Validators.email]], 
+    emailid: ['',[Validators.required,Validators.email,Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]], 
     password: ['', Validators.required]});
     submitted = false;
     

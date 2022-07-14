@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,10 @@ import { RouterModule } from '@angular/router';
     RouterModule.forRoot([
       {path: 'home', component: HomeComponent},
       {path: 'login', component: LoginComponent},
-    ])
+      {path: 'dashboard', component: DashboardComponent},
+      {path: '', redirectTo: 'home', pathMatch: 'full'},
+    ]),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
