@@ -8,7 +8,7 @@
             <div *ngIf="emailid?.touched && emailid?.invalid" >
               <span>*Email is invalid.</span></div>
             <input type="emailid" id="emailid" class="form-control form-control-lg" 
-             placeholder="Enter a valid email address" formControlName="emailid" ng-required="required" #email required/>
+             placeholder="Enter a valid email address" formControlName="emailid" ng-required="required" #email />
               <label class="form-label" for="form3Example3" ></label>
           </div>
 
@@ -26,7 +26,7 @@
           </div>
           <div class="text-center text-lg-start mt-4 pt-2">
             <button type="button" class="btn btn-success"
-            type="submit" [disabled]="!LoginForm.valid" style="padding-left: 2.5rem; padding-right: 2.5rem;" routerLink="/dashboard">Login</button>
+            type="submit" [disabled]="!LoginForm.valid" style="padding-left: 2.5rem; padding-right: 2.5rem;" (click)="proceedLogin(email.value)" >Login</button>
             <button  type="button" class="btn  btn-danger"
             type="submit" (click)="Clear()" style="padding-left: 2.5rem; padding-right: 2.5rem;">Cancel</button>
             <button type="button" class="btn  btn-warning" routerLink="/home"

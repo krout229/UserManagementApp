@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { ApiService } from '../shared/api.service';
 import { userModel } from './user-dashboard.model';
@@ -14,7 +15,7 @@ export class DashboardComponent implements OnInit {
   userData !: any;
   showAdd !: boolean;
   showUpdate !: boolean;
-  constructor(private fb:FormBuilder,private api:ApiService) { }
+  constructor(private fb:FormBuilder,private api:ApiService, private router:Router) { }
 
   ngOnInit(): void {
     this.formValue=this.fb.group({
@@ -73,5 +74,9 @@ updateUserDetails(){
     this.formValue.reset();
     this.getAllUser();
   })
+}
+Clear(){
+  localStorage.clear();
+  this.router.navigate(['home'])
 }
 }
